@@ -1,0 +1,42 @@
+PIXEL GAMES IA — COMO USAR
+
+ARQUIVOS
+- index.html: página principal.
+- style.css: aparência e layout.
+- script.js: catálogo, pesquisa, filtros e abertura dos jogos.
+- jogos/: coloque cada jogo em sua própria pasta.
+- imagens/: pasta reservada para capas e imagens.
+
+COMO ADICIONAR UM JOGO
+1. Crie uma pasta dentro de jogos. Exemplo: jogos/aventura/.
+2. Coloque o arquivo principal do jogo nessa pasta e nomeie-o index.html.
+3. Abra script.js e adicione um novo objeto dentro da lista "games", seguindo este modelo:
+
+{
+  title: "Nome do jogo",
+  description: "Uma breve descrição do jogo.",
+  category: "Ação",
+  symbol: "⚔️",
+  tag: "NOVO",
+  path: "jogos/aventura/index.html",
+  color: "linear-gradient(135deg,#55417e,#252044)"
+}
+
+Categorias usadas nos filtros: "Ação", "Plataforma" e "Aventura".
+Você pode adicionar outras categorias, mas também precisará criar o botão correspondente em index.html.
+
+IMPORTANTE SOBRE JOGOS HTML
+- Se o jogo usa arquivos CSS, JavaScript, imagens, áudio ou outros recursos, mantenha a estrutura de pastas dele.
+- Confira se os caminhos dos arquivos dentro do jogo são relativos e funcionam quando publicado em uma subpasta.
+- O site abre o jogo dentro de um iframe.
+- O exemplo em jogos/meu-primeiro-jogo é apenas uma demonstração; substitua-o pelo seu jogo.
+
+PUBLICAÇÃO GRATUITA COM GITHUB PAGES
+1. Crie uma conta no GitHub e um repositório público para o site.
+2. Envie o conteúdo desta pasta para a raiz do repositório (index.html deve ficar na raiz).
+3. Nas configurações do repositório, abra Pages.
+4. Em Build and deployment, selecione Deploy from a branch, escolha a branch main e a pasta /(root), e salve.
+5. Aguarde a publicação e abra o endereço informado pelo GitHub Pages.
+
+DICA
+Este modelo é um site estático. Para adicionar jogos, edite script.js e publique as alterações. Um painel de administração com login e envio de arquivos exigiria um serviço de backend.

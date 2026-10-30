@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171326">
+  <meta name="description" content="Pixel Games IA — uma coleção de jogos independentes para jogar direto no navegador.">
+  <title>Pixel Games IA — Jogos para jogar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Pixel Games IA - início">
+      <span class="brand-icon">▣</span>
+      <span>PIXEL GAMES <b>IA</b></span>
+    </a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#catalogo">Jogos</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="top-cta" href="#catalogo">EXPLORAR <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> ARCADE INDEPENDENTE</div>
+        <h1>SEU PRÓXIMO<br><span>JOGO FAVORITO</span><br>ESTÁ AQUI<span class="cursor">_</span></h1>
+        <p>Uma coleção de jogos independentes feitos para você jogar direto no navegador. Escolha seu desafio e aperte o play!</p>
+        <a class="pixel-button" href="#catalogo">VER JOGOS <span>▶</span></a>
+        <div class="hero-meta"><span>✦ JOGUE GRÁTIS</span><span>✦ SEM DOWNLOAD</span></div>
+      </div>
+      <div class="hero-art" aria-label="Arte decorativa em pixel art">
+        <div class="sun"></div>
+        <div class="pixel-star star-one">✦</div><div class="pixel-star star-two">✧</div>
+        <div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="ground"></div>
+        <div class="arcade-machine">
+          <div class="arcade-screen"><span>PRESS<br>START</span></div>
+          <div class="arcade-controls"><i></i><b>●</b><b>●</b></div>
+        </div>
+        <div class="art-label">INSERT COIN <span>▮</span></div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading">
+        <div><div class="eyebrow">SELEÇÃO DE JOGOS</div><h2>ARQUIVO <span>ARCADE</span></h2></div>
+        <div class="game-count"><strong id="game-count">00</strong><small>JOGOS DISPONÍVEIS</small></div>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Buscar jogo..." aria-label="Buscar jogo"></label>
+        <div class="filters" id="filters">
+          <button class="filter active" data-category="Todos">TODOS</button>
+          <button class="filter" data-category="Ação">AÇÃO</button>
+          <button class="filter" data-category="Plataforma">PLATAFORMA</button>
+          <button class="filter" data-category="Aventura">AVENTURA</button>
+        </div>
+      </div>
+      <div class="game-grid" id="game-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>NENHUM JOGO ENCONTRADO. TENTE OUTRA BUSCA.</p>
+    </section>
+
+    <section class="about-section" id="sobre">
+      <div class="about-mark">PG<span>IA</span></div>
+      <div><div class="eyebrow">FEITO PARA JOGAR</div><h2>PEQUENOS JOGOS.<br><span>GRANDES AVENTURAS.</span></h2>
+      <p>Pixel Games IA é um espaço para reunir experiências independentes e compartilhar jogos criados com criatividade e tecnologia.</p></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-icon">▣</span><span>PIXEL GAMES <b>IA</b></span></a><span>© <span id="year"></span> PIXEL GAMES IA</span><span>FEITO COM <b class="heart">♥</b> E PIXELS</span></footer>
+
+  <div class="player-modal" id="player-modal" aria-hidden="true">
+    <div class="player-window">
+      <div class="player-top"><div><span class="status-dot"></span><strong id="player-title">JOGANDO</strong></div><button id="close-player" aria-label="Fechar jogo">✕ FECHAR</button></div>
+      <iframe id="game-frame" title="Jogo" allow="fullscreen; gamepad" loading="lazy"></iframe>
+      <div class="player-bottom"><span>PIXEL GAMES IA</span><button id="fullscreen">⛶ TELA CHEIA</button></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
